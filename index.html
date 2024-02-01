@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.js"
+        integrity="sha384-0LaRLH/U5g8eCAwewLGQRyC/O+g0kXh8P+5pWpzijxwYczD3nKETIqUyhuA8B/UB"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.css"
+        integrity="sha384-44GnAqZy9yUojzFPjdcUpP822DGm1ebORKY8pe6TkHuqJ038FANyfBYBpRvw8O9w" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 1ST CONTAINER -->
+    <div class="container" id="p-con">
+        <!-- SIDE NAVBAR -->
+        <div class="row">
+            <div class="col-md-1 d-flex flex-column justify-content-between" id="sidebar">
+                <a href="" class="cloud"><i class="fa fa-cloud"></i></a>
+                <div class="d-flex flex-column justify-content-between" id="sidebar_middle">
+                    <a href="" class="home"><i class="fa fa-home"></i></li></a>
+                    <a href=""><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+                </div>
+                <a href=""><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>
+            <!-- TOP NAVBAR -->
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="d-flex align-items-center ">
+                        <div id="weather_main_heading">
+                            <h4>Weather Forecasts</h4>
+                            <p id="date">saturday 26, December 2020</p>
+                        </div>
+
+                        <div style="margin-left:220px;">
+                            <input id="search" type="text" placeholder="&#xF002; Search"
+                                style="font-family:Arial, FontAwesome" />
+                        </div>
+
+                        <div style="margin-left: 45px; font-size: 22px;">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        </div>
+                        <div style="margin-left:20px ; font-size: 20px;"> <i class="fa  fa fa-envelope-o"
+                                aria-hidden="true"></i>
+                        </div>
+
+                        <div id="toggle">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> <i style="font-size:20px ;"
+                                    class="fa fa-user-circle-o"></i> Abishek
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CONTAINER -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="card" id="card_main_dashboard"><img
+                                        src="images/undraw_best_place_re_lne9.svg" alt="loading..." id="main_dashboard">
+                                    <div class="card-img-overlay">
+                                        <h5 style="padding-top: 30px;padding-left: 25px;margin-bottom: 4px;" id="city">
+                                            MECCA</h5>
+                                        <p style="padding-left:25px;color: rgba(62, 61, 61, 0.6);" id="country">Saudi
+                                            Arabia</p>
+                                        <p><span id="today_temp"
+                                                style="font-size:60px ;padding:25px;color: rgba(29, 28, 28, 0.604);padding-right: 5px;">32</span>
+                                            °C
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button type="button" class="btn btn-light">
+                                <h5>Today</h5>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <h5>Week</h5>
+                            </button>
+                            <!-- WEEK CARDS -->
+                            <div class="row">
+                                <!-- 1st day -->
+                                <div class="col-md-3">
+                                    <div class="card" style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">saturday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">cloudy</p>
+                                                </td>
+                                                <td class="day_icon"> <img src="images/cloud with air p3.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img">
+                                                        <span class="day_airflow">10 </span> Km/h
+
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img">
+                                                        <span class="day_humidity">60</span>%
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"> <span class="day_tem"> 32</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 2ND DAY-->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">sunday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">Rainy</p>
+                                                </td>
+                                                <td class="day_icon"> <img src="images/cloud rain sun p-3.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"> <span
+                                                            class="day_airflow">10.3 </span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span
+                                                            class="day_humidity">60</span> %</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">22</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 3RD DAY -->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">Monday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">Sunny</p>
+                                                </td>
+                                                <td class="day_icon"><img src="images/cloud with air p3.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"> <span
+                                                            class="day_airflow">10.3</span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span class="day_humidity">60
+                                                        </span> %</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">23</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 4th day -->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">Tuesday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">Sunny</p>
+                                                </td>
+                                                <td class="day_icon"><img src="images/cloud rain sun p-3.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"><span
+                                                            class="day_airflow">10.3</span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span class="day_humidity">60
+                                                        </span>%</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">23</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 5th day -->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">Wednesday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">Sunny</p>
+                                                </td>
+                                                <td class="day_icon"><img src="images/cloud air sun.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"><span
+                                                            class="day_airflow">10.3</span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span class="day_humidity">60
+                                                        </span>%</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">23</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 6th day -->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">Thrusday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">Rainy</p>
+                                                </td>
+                                                <td class="day_icon"><img src="images/cloud with rain -p3.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"><span
+                                                            class="day_airflow">10.3</span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span class="day_humidity">60
+                                                        </span>%</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">23</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 7th DAY -->
+                                <div class="col-md-3">
+                                    <div class="card " style="height:140px ; border-radius: 15px;">
+                                        <table>
+                                            <tr>
+                                                <td class="card-title">
+                                                    <h6 style="margin-bottom: 0px;" class="day">Friday</h6>
+                                                    <p class="card_weather_staus day_weather_staus">cold</p>
+                                                </td>
+                                                <td class="day_icon"><img src="images/normal.png" alt=""
+                                                        class="card_day-weather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:7px ;">
+                                                    <p class="card_air">
+                                                        <img src="images/airflow.png" alt="" id="card_air_img"> <span
+                                                            class="day_airflow">10.3</span>
+                                                        Km/h
+                                                    </p>
+                                                    <p style="font-size:10px ;"> <img src="images/humudity p3.png"
+                                                            alt="" id="card_humidity_img"><span class="day_humidity">60
+                                                        </span>%</p>
+                                                </td>
+                                                <td>
+                                                    <h3 style="padding-top: 15px;"><span class="day_tem">23</span>°
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- FOTTER MIDDLE -->
+                            <h5 style="padding-top: 25px;padding-bottom :25px;margin-bottom: 0px;">Today Highlight's
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-4" style="padding-left:10px;padding-right:0px;">
+                                    <div class="card" style="border-radius: 15px;">
+                                        <table>
+
+                                            <thead>
+                                                <h6 class="card-title" style="padding: 10px;">
+                                                    Surise
+                                                    & Sunset</h6>
+                                            </thead>
+
+                                            <tr>
+                                                <td style="font-size: 15px; padding-left: 10px;padding-bottom: 10px;">
+                                                    <img src="images/up arrow.jpg" alt=""
+                                                        style="height:35px;width: 35px;"><span
+                                                        id="sunrise">5:50am</span>
+
+
+                                                </td>
+                                                <td style="font-size: 15px;padding-bottom: 10px;">
+                                                    <img src="images/down arrow.png" alt=" "
+                                                        style="height:35px;width: 35px;"> <span
+                                                        id="sunset">5:25pm</span>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="background-color: #f5f4ecf0;">
+                                    <div><img src="images/delhi-weather-forecast-april-2021.webp" alt=""
+                                            style="height:92px ; width: 210px; border-radius: 15px;">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div><img src="images/aqi 3.jpeg" alt=""
+                                            style="height:90px; width:100%; border-radius: 15px;">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- RIGHT SIDE DEVITION -->
+                        <div class="col-md-4" id="right_side">
+
+                            <div class="row">
+                                <div class="auto-jsCalendar  micro-theme yellow" data-navigator="false"
+                                    data-firstDayOfTheWeek="2"></div>
+                            </div>
+                            <div class="row"> <img src="images/thumbnail-pm-newsletter-subscribe.jpg" alt=""
+                                    id="subscribe_img">
+                            </div>
+                            <div class="row">
+                                <img src="images/Download-and-Install-Google-Play-Store-application-1-880x525.jpg"
+                                    alt="" id="download_app_img">
+                            </div>
+                            <div class="row">
+                                <div class="card text-right" style="border: 0; background-color: #f5f4ecf0;">
+                                    <img class="card-img" src="images/undraw_city_life_gnpr.svg" alt="Card image"
+                                        id="add_city_img">
+                                    <div class="card-img-overlay">
+
+                                        <button class="btn btn-danger" style="border-radius:10px;">+Add
+                                            city</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
